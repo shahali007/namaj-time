@@ -625,6 +625,115 @@ const allMonth = [
             },
         ],
     },
+
+    {
+        monthName: "October",
+        data: [
+            {
+                Date: "2022-10-01",
+                Fajr: "04:37",
+                Dhuhr: "11:51",
+                Asr: "04:06",
+                Maghrib: "05:49",
+                Isha: "07:02",
+                Sehri: "04:31",
+                Iftar: "05:48",
+            },
+            {
+                Date: "2022-10-02",
+                Fajr: "04:37",
+                Dhuhr: "11:51",
+                Asr: "04:06",
+                Maghrib: "05:49",
+                Isha: "07:02",
+                Sehri: "04:31",
+                Iftar: "05:48",
+            },
+            {
+                Date: "2022-10-03",
+                Fajr: "04:37",
+                Dhuhr: "11:51",
+                Asr: "04:06",
+                Maghrib: "05:49",
+                Isha: "07:02",
+                Sehri: "04:31",
+                Iftar: "05:48",
+            },
+            {
+                Date: "2022-10-04",
+                Fajr: "04:37",
+                Dhuhr: "11:51",
+                Asr: "04:06",
+                Maghrib: "05:49",
+                Isha: "07:02",
+                Sehri: "04:31",
+                Iftar: "05:48",
+            },
+            {
+                Date: "2022-10-05",
+                Fajr: "04:37",
+                Dhuhr: "11:51",
+                Asr: "04:06",
+                Maghrib: "05:49",
+                Isha: "07:02",
+                Sehri: "04:31",
+                Iftar: "05:48",
+            },
+            
+            {
+                Date: "2022-10-06",
+                Fajr: "04:39",
+                Dhuhr: "11:50",
+                Asr: "04:02",
+                Maghrib: "05:44",
+                Isha: "06:57",
+                Sehri: "04:33",
+                Iftar: "05:43",
+            },
+            {
+                Date: "2022-10-07",
+                Fajr: "04:39",
+                Dhuhr: "11:50",
+                Asr: "04:02",
+                Maghrib: "05:44",
+                Isha: "06:57",
+                Sehri: "04:33",
+                Iftar: "05:43",
+            },
+            {
+                Date: "2022-10-08",
+                Fajr: "04:39",
+                Dhuhr: "11:50",
+                Asr: "04:02",
+                Maghrib: "05:44",
+                Isha: "06:57",
+                Sehri: "04:33",
+                Iftar: "05:43",
+            },
+            {
+                Date: "2022-10-09",
+                Fajr: "04:39",
+                Dhuhr: "11:50",
+                Asr: "04:02",
+                Maghrib: "05:44",
+                Isha: "06:57",
+                Sehri: "04:33",
+                Iftar: "05:43",
+            },
+            {
+                Date: "2022-10-10",
+                Fajr: "04:39",
+                Dhuhr: "11:50",
+                Asr: "04:02",
+                Maghrib: "05:44",
+                Isha: "06:57",
+                Sehri: "04:33",
+                Iftar: "05:43",
+            },
+            
+            
+        ],
+    },
 ];
 
 /**
@@ -714,7 +823,7 @@ const districts = {
     Chittagong: {
         name: "Chittagong",
         bnName: "চট্টগ্রাম",
-        addMinute: 4,
+        addMinute: 0,
     },
     Rajshahi: {
         name: "Rajshahi",
@@ -724,22 +833,22 @@ const districts = {
     Khulna: {
         name: "Khulna",
         bnName: "খুলনা",
-        addMinute: 10,
+        addMinute: 1,
     },
     Barishal: {
         name: "Barishal",
         bnName: "বরিশাল",
-        addMinute: 1,
+        addMinute: -2,
     },
     Sylhet: {
         name: "Sylhet",
         bnName: "সিলেট",
-        addMinute: 10,
+        addMinute: 4,
     },
     Rangpur: {
         name: "Rangpur",
         bnName: "রংপুর",
-        addMinute: 2,
+        addMinute: 5,
     },
     Mymensingh: {
         name: "Mymensingh",
@@ -757,6 +866,7 @@ let currentMonthName = bnEnMonthNames[date.getMonth()].enName;
 document.getElementById("dateContainer2").setAttribute("data-month", currentMonthName);
 const allBtn = document.querySelectorAll(".button");
 let container = document.getElementById("dateContainer2");
+let place = document.getElementById("place");
 
 /**
  *
@@ -767,6 +877,7 @@ for (const [key, value] of Object.entries(districts)) {
     let option = document.createElement("option");
     option.value = key;
     option.innerHTML = value.bnName;
+    option.setAttribute("data-banglaname", value.bnName);
     districtSelect.appendChild(option);
 }
 
@@ -889,16 +1000,6 @@ allBtn.forEach((btn) => {
     });
 });
 
-function activeMonthName() {
-    bnEnMonthNames.forEach((month) => {
-        // let button = document.createElement("button");
-        // button.value = month.enName;
-        // button.innerHTML = month.bnName;
-        // button.className = "button";
-        // buttonContainer.appendChild(button);
-    });
-}
-
 /**
  *
  * @param {data of current month} getSingleData
@@ -928,8 +1029,8 @@ function generateData(getSingleData) {
 
 /**
  *
- * Set active class in 
- * 
+ * Set active class in
+ *
  * Current date row;
  * Button
  */
@@ -944,7 +1045,7 @@ function setActiveClass() {
 
     // Active button
     let selectedBtn = document.getElementById(container.dataset.month);
-    selectedBtn.classList.add('active');
+    selectedBtn.classList.add("active");
 }
 
 /**
@@ -954,6 +1055,8 @@ function setActiveClass() {
 districtSelect.addEventListener("change", (e) => {
     // Set data-district attribute in container div
     container.setAttribute("data-district", e.target.value);
+    place.innerHTML = districts[e.target.value].bnName;
+
     // Filter month data
     let getSingleData = allMonth.filter((elem) => {
         // Get data-district value using 'dataset' property

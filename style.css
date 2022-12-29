@@ -1,5 +1,9 @@
+.text-center {
+    text-align: center;
+}
+
 #dateContainer {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
@@ -26,25 +30,41 @@
     color: white;
 }
 
+.districtContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    gap: 10px;
+    align-items: center;
+}
+
+.districtContainer select {
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
 .buttonContainer {
     display: flex;
-    align-items: center;
+    justify-content: center;
     margin-bottom: 1rem;
 }
 
 .buttonContainer button.button {
-    padding: 8px 1rem;
-    background: #673ab7;
-    color: #fff;
-    font-size: 20px;
+    padding: 6px 14px;
+    background: #e3e3e3;
+    color: #000;
+    font-size: 18px;
     border: none;
     font-weight: 700;
     margin-right: 5px;
     cursor: pointer;
+    border-radius: 3px;
 }
 
-.buttonContainer .button.active{
-    background: #20084b;
+.buttonContainer .button.active {
+    background: #673ab7;
+    color: #fff;
 }
 
 #dateContainer tr.active {

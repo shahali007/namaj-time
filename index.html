@@ -11,11 +11,15 @@
 
     <body>
         <section>
-            <div class="buttonContainer" id="buttonContainer">
-                <!-- <button value="November">নভেম্বর</button>
-                <button value="December">ডিসেম্বর</button> -->
+            <div class="text-center">
+                <h2>নামাজ, সেহরি ও ইফতার এর সময়সূচি (<span id="place">ঢাকা</span>)</h2>
+                <p>ঢাকা সহ দেশের সব কয়টি জেলার সারা বছরের নামাজ, সেহরি ও ইফতারের সময় দেখুন এই পাতায়।</p>
             </div>
-            <select name="districtSelect" id="districtSelect"></select>
+            <div class="districtContainer">
+                আপনার জেলা খুঁজুন :
+                <select name="districtSelect" id="districtSelect"></select>
+            </div>
+            <div class="buttonContainer" id="buttonContainer"></div>
             <div style="overflow-x: auto">
                 <table id="dateContainer">
                     <tbody>
