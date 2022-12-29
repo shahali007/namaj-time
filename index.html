@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Prayer Times</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <section>
+            <div class="buttonContainer" id="buttonContainer">
+                <!-- <button value="November">নভেম্বর</button>
+                <button value="December">ডিসেম্বর</button> -->
+            </div>
+            <select name="districtSelect" id="districtSelect"></select>
+            <div style="overflow-x: auto">
+                <table id="dateContainer">
+                    <tbody>
+                        <tr>
+                            <th>তারিখ</th>
+                            <th>ফজর</th>
+                            <th>যোহর</th>
+                            <th>আছর</th>
+                            <th>মাগরিব</th>
+                            <th>ইশা</th>
+                            <th>সাহরি</th>
+                            <th>ইফতার</th>
+                        </tr>
+                    </tbody>
+
+                    <tbody id="dateContainer2" data-month="" data-district="Dhaka"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- script files -->
+        <script src="app.js"></script>
+    </body>
+
+</html>
