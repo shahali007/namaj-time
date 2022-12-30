@@ -875,14 +875,13 @@ for (const [key, value] of Object.entries(districts)) {
     let option = document.createElement("option");
     option.value = key;
     option.innerHTML = value.bnName;
-    option.setAttribute("data-banglaname", value.bnName);
     districtSelect.appendChild(option);
 }
 
 /**
  *
  * Declare today
- * @returns yyyy-mm-dd
+ * @returns dd mm, yyyy
  */
 function today() {
     let todayTime = new Date();
@@ -942,7 +941,7 @@ const daySchedule = {
 /**
  *
  * Convert English number to bangla number
- * @param {'2022-12-31'} numberParam
+ * @param {'2022-12-31' / '05:41'} numberParam
  * @returns bangla number
  */
 function convertEnToBn(numberParam) {
@@ -998,9 +997,9 @@ allBtn.forEach((btn) => {
 });
 
 /**
- *
+ * Generate Table Row
  * @param {data of current month} getSingleData
- * @returns [Generated table row]
+ * @returns Table rows
  */
 function generateData(getSingleData) {
     // remove old row
@@ -1056,14 +1055,14 @@ districtSelect.addEventListener("change", (e) => {
 
     // Filter month data
     let getSingleData = allMonth.filter((elem) => {
-        // Get data-district value using 'dataset' property
+        // Get data-month value using 'dataset' property
         return elem.monthName == container.dataset.month;
     });
     generateData(getSingleData);
 });
 
 /**
- * Convert into bangla month
+ * Convert date within bangla month
  */
 function convertIntoBanglaDate(yyyy, mm, dd) {
     let todayTime = convertEnToBn(dd) + " " + bnEnMonthNames[mm - 1].bnName + ", " + convertEnToBn(yyyy);
@@ -1071,11 +1070,12 @@ function convertIntoBanglaDate(yyyy, mm, dd) {
 }
 
 /**
- *
+ * Adjust time within convertIntoBanglaDate() or convertHourMinute()
  * @param {'Date','Fajr','Dhuhr','Asr','Maghrib','Isha','Sehri','Iftar',} key
  * @param {value is associated with key} value
  * @param {[key, value]} monthData
- * @returns hour and minute with additional time
+ * @returns {'Bangla date with month'} convertIntoBanglaDate()
+ * @returns {'Hour & minute with daySchedule'} convertHourMinute()
  */
 function adjustTimeValue(key, value, monthData) {
     const date = new Date(monthData.Date + " " + value);
