@@ -5,321 +5,6 @@
  */
 const allMonth = [
     {
-        monthName: "January",
-        data: [
-            {
-                Date: "2022-12-01",
-                Fajr: "05:06",
-                Dhuhr: "11:51",
-                Asr: "03:35",
-                Maghrib: "05:14",
-                Isha: "06:32",
-                Sehri: "05:00",
-                Iftar: "05:14",
-            },
-            {
-                Date: "2022-12-02",
-                Fajr: "05:06",
-                Dhuhr: "11:51",
-                Asr: "03:35",
-                Maghrib: "05:14",
-                Isha: "06:32",
-                Sehri: "05:00",
-                Iftar: "05:14",
-            },
-            {
-                Date: "2022-12-03",
-                Fajr: "05:06",
-                Dhuhr: "11:51",
-                Asr: "03:35",
-                Maghrib: "05:14",
-                Isha: "06:32",
-                Sehri: "05:00",
-                Iftar: "05:14",
-            },
-            {
-                Date: "2022-12-04",
-                Fajr: "05:06",
-                Dhuhr: "11:51",
-                Asr: "03:35",
-                Maghrib: "05:14",
-                Isha: "06:32",
-                Sehri: "05:00",
-                Iftar: "05:14",
-            },
-            {
-                Date: "2022-12-05",
-                Fajr: "05:06",
-                Dhuhr: "11:51",
-                Asr: "03:35",
-                Maghrib: "05:14",
-                Isha: "06:32",
-                Sehri: "05:00",
-                Iftar: "05:14",
-            },
-            {
-                Date: "2022-12-06",
-                Fajr: "05:09",
-                Dhuhr: "11:53",
-                Asr: "03:35",
-                Maghrib: "05:14",
-                Isha: "06:33",
-                Sehri: "05:03",
-                Iftar: "05:14",
-            },
-            {
-                Date: "2022-12-07",
-                Fajr: "05:09",
-                Dhuhr: "11:53",
-                Asr: "03:35",
-                Maghrib: "05:14",
-                Isha: "06:33",
-                Sehri: "05:03",
-                Iftar: "05:14",
-            },
-            {
-                Date: "2022-12-08",
-                Fajr: "05:09",
-                Dhuhr: "11:53",
-                Asr: "03:35",
-                Maghrib: "05:14",
-                Isha: "06:33",
-                Sehri: "05:03",
-                Iftar: "05:14",
-            },
-            {
-                Date: "2022-12-09",
-                Fajr: "05:09",
-                Dhuhr: "11:53",
-                Asr: "03:35",
-                Maghrib: "05:14",
-                Isha: "06:33",
-                Sehri: "05:03",
-                Iftar: "05:14",
-            },
-            {
-                Date: "2022-12-10",
-                Fajr: "05:09",
-                Dhuhr: "11:53",
-                Asr: "03:35",
-                Maghrib: "05:14",
-                Isha: "06:33",
-                Sehri: "05:03",
-                Iftar: "05:14",
-            },
-            {
-                Date: "2022-12-11",
-                Fajr: "05:09",
-                Dhuhr: "11:53",
-                Asr: "03:35",
-                Maghrib: "05:14",
-                Isha: "06:33",
-                Sehri: "05:03",
-                Iftar: "05:14",
-            },
-            {
-                Date: "2022-12-12",
-                Fajr: "05:13",
-                Dhuhr: "11:56",
-                Asr: "03:37",
-                Maghrib: "05:16",
-                Isha: "06:35",
-                Sehri: "05:07",
-                Iftar: "05:16",
-            },
-            {
-                Date: "2022-12-13",
-                Fajr: "05:13",
-                Dhuhr: "11:56",
-                Asr: "03:37",
-                Maghrib: "05:16",
-                Isha: "06:35",
-                Sehri: "05:07",
-                Iftar: "05:16",
-            },
-            {
-                Date: "2022-12-14",
-                Fajr: "05:13",
-                Dhuhr: "11:56",
-                Asr: "03:37",
-                Maghrib: "05:16",
-                Isha: "06:35",
-                Sehri: "05:07",
-                Iftar: "05:16",
-            },
-            {
-                Date: "2022-12-15",
-                Fajr: "05:13",
-                Dhuhr: "11:56",
-                Asr: "03:37",
-                Maghrib: "05:16",
-                Isha: "06:35",
-                Sehri: "05:07",
-                Iftar: "05:16",
-            },
-            {
-                Date: "2022-12-16",
-                Fajr: "05:13",
-                Dhuhr: "11:56",
-                Asr: "03:37",
-                Maghrib: "05:16",
-                Isha: "06:35",
-                Sehri: "05:07",
-                Iftar: "05:16",
-            },
-            {
-                Date: "2022-12-17",
-                Fajr: "05:13",
-                Dhuhr: "11:56",
-                Asr: "03:37",
-                Maghrib: "05:16",
-                Isha: "06:35",
-                Sehri: "05:07",
-                Iftar: "05:16",
-            },
-            {
-                Date: "2022-12-18",
-                Fajr: "05:16",
-                Dhuhr: "11:58",
-                Asr: "03:39",
-                Maghrib: "05:18",
-                Isha: "06:37",
-                Sehri: "05:10",
-                Iftar: "05:18",
-            },
-            {
-                Date: "2022-12-19",
-                Fajr: "05:16",
-                Dhuhr: "11:58",
-                Asr: "03:39",
-                Maghrib: "05:18",
-                Isha: "06:37",
-                Sehri: "05:10",
-                Iftar: "05:18",
-            },
-            {
-                Date: "2022-12-20",
-                Fajr: "05:16",
-                Dhuhr: "11:58",
-                Asr: "03:39",
-                Maghrib: "05:18",
-                Isha: "06:37",
-                Sehri: "05:10",
-                Iftar: "05:18",
-            },
-            {
-                Date: "2022-12-21",
-                Fajr: "05:16",
-                Dhuhr: "11:58",
-                Asr: "03:39",
-                Maghrib: "05:18",
-                Isha: "06:37",
-                Sehri: "05:10",
-                Iftar: "05:18",
-            },
-            {
-                Date: "2022-12-22",
-                Fajr: "05:16",
-                Dhuhr: "11:58",
-                Asr: "03:39",
-                Maghrib: "05:18",
-                Isha: "06:37",
-                Sehri: "05:10",
-                Iftar: "05:18",
-            },
-            {
-                Date: "2022-12-23",
-                Fajr: "05:16",
-                Dhuhr: "11:58",
-                Asr: "03:39",
-                Maghrib: "05:18",
-                Isha: "06:37",
-                Sehri: "05:10",
-                Iftar: "05:18",
-            },
-            {
-                Date: "2022-12-24",
-                Fajr: "05:19",
-                Dhuhr: "12:02",
-                Asr: "03:42",
-                Maghrib: "05:21",
-                Isha: "06:40",
-                Sehri: "05:13",
-                Iftar: "05:21",
-            },
-            {
-                Date: "2022-12-25",
-                Fajr: "05:19",
-                Dhuhr: "12:02",
-                Asr: "03:42",
-                Maghrib: "05:21",
-                Isha: "06:40",
-                Sehri: "05:13",
-                Iftar: "05:21",
-            },
-            {
-                Date: "2022-12-26",
-                Fajr: "05:19",
-                Dhuhr: "12:02",
-                Asr: "03:42",
-                Maghrib: "05:21",
-                Isha: "06:40",
-                Sehri: "05:13",
-                Iftar: "05:21",
-            },
-            {
-                Date: "2022-12-27",
-                Fajr: "05:19",
-                Dhuhr: "12:02",
-                Asr: "03:42",
-                Maghrib: "05:21",
-                Isha: "06:40",
-                Sehri: "05:13",
-                Iftar: "05:21",
-            },
-            {
-                Date: "2022-12-28",
-                Fajr: "05:19",
-                Dhuhr: "12:02",
-                Asr: "03:42",
-                Maghrib: "05:21",
-                Isha: "06:40",
-                Sehri: "05:13",
-                Iftar: "05:21",
-            },
-            {
-                Date: "2022-12-29",
-                Fajr: "05:19",
-                Dhuhr: "12:02",
-                Asr: "03:42",
-                Maghrib: "05:21",
-                Isha: "06:40",
-                Sehri: "05:13",
-                Iftar: "05:21",
-            },
-            {
-                Date: "2022-12-30",
-                Fajr: "05:21",
-                Dhuhr: "12:04",
-                Asr: "03:45",
-                Maghrib: "05:25",
-                Isha: "06:44",
-                Sehri: "05:15",
-                Iftar: "05:25",
-            },
-            {
-                Date: "2022-12-31",
-                Fajr: "05:21",
-                Dhuhr: "12:04",
-                Asr: "03:45",
-                Maghrib: "05:25",
-                Isha: "06:44",
-                Sehri: "05:15",
-                Iftar: "05:25",
-            },
-        ],
-    },
-    {
         monthName: "December",
         data: [
             {
@@ -994,7 +679,7 @@ const allMonth = [
                 Sehri: "04:31",
                 Iftar: "05:48",
             },
-            
+
             {
                 Date: "2022-10-06",
                 Fajr: "04:39",
@@ -1045,8 +730,6 @@ const allMonth = [
                 Sehri: "04:33",
                 Iftar: "05:43",
             },
-            
-            
         ],
     },
 ];
@@ -1206,9 +889,8 @@ function today() {
     let dd = String(todayTime.getDate()).padStart(2, "0");
     let mm = String(todayTime.getMonth() + 1).padStart(2, "0"); //January is 0!
     let yyyy = todayTime.getFullYear();
-
-    todayTime = yyyy + "-" + mm + "-" + dd;
-    return convertEnToBn(todayTime);
+    todayTime = convertEnToBn(dd) + " " + bnEnMonthNames[mm - 1].bnName + ", " + convertEnToBn(yyyy);
+    return todayTime;
 }
 
 /**
@@ -1224,16 +906,6 @@ function convertHourMinute(key, date, monthData) {
 
     const convertedDate = convertEnToBn(date) + " " + daySchedule[key].msg;
     return convertedDate;
-}
-
-/**
- * Convert into bangla month
- */
-function convertIntoBanglaDate(yyyy, mm, dd) {
-    let todayTime = new Date();
-    // let yyyy = todayTime.getFullYear();
-    todayTime = convertEnToBn(yyyy) + "-" + bnEnMonthNames[mm].bnName + "-" + convertEnToBn(dd);
-    return todayTime;
 }
 
 /**
@@ -1391,6 +1063,14 @@ districtSelect.addEventListener("change", (e) => {
 });
 
 /**
+ * Convert into bangla month
+ */
+function convertIntoBanglaDate(yyyy, mm, dd) {
+    let todayTime = convertEnToBn(dd) + " " + bnEnMonthNames[mm - 1].bnName + ", " + convertEnToBn(yyyy);
+    return todayTime;
+}
+
+/**
  *
  * @param {'Date','Fajr','Dhuhr','Asr','Maghrib','Isha','Sehri','Iftar',} key
  * @param {value is associated with key} value
@@ -1405,7 +1085,7 @@ function adjustTimeValue(key, value, monthData) {
         let dd = value.split("-")[2];
         let yyyy = newDate.getFullYear();
         let finalDate = yyyy + "-" + mm + "-" + dd;
-        return convertEnToBn(finalDate);
+        return convertIntoBanglaDate(yyyy, mm, dd);
     }
     // Add minute(s)
     else {
