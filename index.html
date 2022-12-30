@@ -12,7 +12,7 @@
     <body>
         <section class="namaj-times">
             <div class="banner">
-                
+
             </div>
             <div class="text-center intro">
                 <h2>নামাজ, সেহরি ও ইফতার এর সময়সূচি (<span id="place">ঢাকা</span>)</h2>
@@ -43,8 +43,36 @@
             </div>
         </section>
 
+        <div id="demo"></div>
+
         <!-- script files -->
-        <script src="app.js"></script>
+        <script src="js/namajTimes.js"></script>
+        <script src="js/districts.js"></script>
+        <script src="js/months.js"></script>
+        <script src="js/daySchedule.js"></script>
+        <script src="appClass.js"></script>
+        <script>
+
+
+            let namajClassObject = new NamajTimes(namajTimes, districts, months, daySchedule, 'bn');
+            namajClassObject.init();
+
+            // Month click
+            let allBtn = document.querySelectorAll(".button");
+            allBtn.forEach((btn) => {
+                btn.addEventListener("click", (e) => {
+                    namajClassObject.monthClick(e, allBtn);
+                });
+            });
+
+            // District change
+            let place = document.getElementById("place");
+            districtSelect.addEventListener("change", (e) => {
+                namajClassObject.districtChange(e, place);
+            });
+
+        </script>
+        <!-- <script src="app.js"></script> -->
     </body>
 
 </html>
