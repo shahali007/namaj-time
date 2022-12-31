@@ -27,6 +27,7 @@ class NamajTimes {
         let getSingleData = this.namajTimesArr.filter((elem) => {
             return elem.monthName == this.currentMonth;
         });
+        console.log(getSingleData);
         this.generateData(getSingleData);
     }
 
@@ -74,9 +75,11 @@ class NamajTimes {
         let allRowTd = document.querySelectorAll("#dateContainer2 td");
         allRowTd.forEach((elem) => {
             if (elem.innerHTML == this.today()) {
-                elem.parentNode.classList.add("active");
+                elem.parentNode.classList.add("active");           
             }
         });
+
+        
 
         // Active button
         let selectedBtn = document.getElementById(this.container.dataset.month);
@@ -170,4 +173,6 @@ class NamajTimes {
         const convertedDate = this.convertEnToBn(date) + " " + this.daySchedule[key].msg;
         return convertedDate;
     }
+
+    
 }
