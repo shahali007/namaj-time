@@ -18,10 +18,11 @@ class NamajTimes {
         this.generateMonthButton();
         this.generateDistrictSelect();
         this.container.setAttribute("data-month", this.currentMonth);
-        this.loadInitalData();
+        this.loadInitialData();
+        this.setActiveClass();
     }
 
-    loadInitalData() {
+    loadInitialData() {
         // filter current Month Data
         let getSingleData = this.namajTimesArr.filter((elem) => {
             return elem.monthName == this.currentMonth;
