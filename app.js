@@ -1043,6 +1043,7 @@ function setActiveClass() {
     let selectedBtn = document.getElementById(container.dataset.month);
     selectedBtn.classList.add("active");
 }
+setActiveClass();
 
 /**
  *
