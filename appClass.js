@@ -7,7 +7,7 @@ class NamajTimes {
         this.language = language;
 
         this.buttonContainer = document.getElementById("buttonContainer");
-        this.container = document.getElementById("dateContainer2");        
+        this.container = document.getElementById("dateContainer2");
         this.districtSelect = document.getElementById("districtSelect");
 
         this.date = new Date();
@@ -76,10 +76,9 @@ class NamajTimes {
         let allRowTd = document.querySelectorAll("#dateContainer2 td");
         allRowTd.forEach((elem) => {
             if (elem.innerHTML == this.today()) {
-                elem.parentNode.classList.add("active");           
+                elem.parentNode.classList.add("active");
             }
         });
-        
 
         // Active button
         let selectedBtn = document.getElementById(this.container.dataset.month);
@@ -162,7 +161,15 @@ class NamajTimes {
 
     convertIntoBanglaDate(yyyy, mm, dd) {
         let todayTime = this.convertEnToBn(dd) + " " + months[mm - 1].bnName + ", " + this.convertEnToBn(yyyy);
+        let arabicTime = new Intl.DateTimeFormat("bn-FR-u-ca-islamic", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+        }).format(new Date(`${yyyy}-${mm}-${dd}`));
+        arabicTime = arabicTime.replace("যুগ", "হিজরি");
+        // todayTime = `<span>${todayTime}</span`;
         return todayTime;
+        // return todayTime + " / " + arabicTime;
     }
 
     convertHourMinute(key, date, monthData) {
@@ -172,5 +179,5 @@ class NamajTimes {
 
         const convertedDate = this.convertEnToBn(date) + " " + this.daySchedule[key].msg;
         return convertedDate;
-    }    
+    }
 }
