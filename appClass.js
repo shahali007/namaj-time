@@ -60,8 +60,9 @@ class NamajTimes {
             let mm = value.split("-")[1];
             let dd = value.split("-")[2];
             let yyyy = newDate.getFullYear();
-            // let finalDate = yyyy + "-" + mm + "-" + dd;
             return this.convertIntoBanglaDate(yyyy, mm, dd);
+            // const finalDate = new Intl.DateTimeFormat('bn-BN-u-ca-bangla', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date);
+            // return finalDate;
         }
         // Add minute(s)
         else {
@@ -78,7 +79,6 @@ class NamajTimes {
                 elem.parentNode.classList.add("active");           
             }
         });
-
         
 
         // Active button
@@ -172,7 +172,5 @@ class NamajTimes {
 
         const convertedDate = this.convertEnToBn(date) + " " + this.daySchedule[key].msg;
         return convertedDate;
-    }
-
-    
+    }    
 }

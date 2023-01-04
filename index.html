@@ -15,6 +15,7 @@
 
             </div>
             <div class="text-center intro">
+                <h4 id="arabicDate"></h4>
                 <h2>নামাজ, সেহরি ও ইফতার এর সময়সূচি (<span id="place">ঢাকা</span>)</h2>
                 <p>ঢাকা সহ দেশের সব কয়টি জেলার সারা বছরের নামাজ, সেহরি ও ইফতারের সময় দেখুন এই পাতায়।</p>
             </div>
@@ -70,6 +71,11 @@
             districtSelect.addEventListener("change", (e) => {
                 namajClassObject.districtChange(e, place);
             });
+
+            // Arabic Date
+            const arabicDate = new Intl.DateTimeFormat('bn-FR-u-ca-islamic', { day: 'numeric', month: 'long', year: 'numeric' }).format();
+            const changeHijri = arabicDate.replace('যুগ', 'হিজরি')
+            document.getElementById('arabicDate').innerHTML = changeHijri
 
         </script>
         <!-- <script src="app.js"></script> -->
